@@ -171,7 +171,9 @@ instructorr.insert(0,"Done")
 print(instructorr)
 
                                 #SLICES = make new lists using slices of the old list!
+
 # some_list[start:end:step]
+
 fi = [1,2,3,4]
 print(fi[::-1])
 print(fi[-2:])
