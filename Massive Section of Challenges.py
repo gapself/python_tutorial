@@ -69,3 +69,8 @@ print(vowel_count('awesome')) # {'a': 1, 'e': 2, 'o': 1})
 print(vowel_count('Elie'))   # {'e': 2, 'i': 1}
 print(vowel_count('Colt'))  # {'o': 1}
 
+# TITLEIZE
+def titleize(string):
+    return " ".join(word[0].upper() + word[1:] for word in string.split())
+print(titleize('this is awesome')) # "This Is Awesome"
+
