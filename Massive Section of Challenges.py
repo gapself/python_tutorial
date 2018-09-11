@@ -71,6 +71,17 @@ print(vowel_count('Colt'))  # {'o': 1}
 
 # TITLEIZE
 def titleize(string):
-    return " ".join(word[0].upper() + word[1:] for word in string.split())
+    # return " ".join(word[0].upper() + word[1:] for word in string.split())
+    return string.split()
 print(titleize('this is awesome')) # "This Is Awesome"
+
+# FIND FACTORS
+def find_factors(num):
+    return [nums for nums in range(1,num+1) if num %nums ==0]
+
+print(find_factors(10)) # [1,2,5,10 ]
+print(find_factors(11)) # [1,11]
+print(find_factors(111)) # [1,3,37,111 ]
+
+
 
