@@ -8,3 +8,7 @@ def bonAppetit(bill, k, b):
     return "Bon Appetit" if b_actual==b else b-b_actual
 
 print(bonAppetit(bill, k, b))
+
+# Capitalize
+def solve(s):
+    return " ".join(x.capitalize() for x in s.split())
