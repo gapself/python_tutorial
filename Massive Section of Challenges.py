@@ -83,5 +83,17 @@ print(find_factors(10)) # [1,2,5,10 ]
 print(find_factors(11)) # [1,11]
 print(find_factors(111)) # [1,3,37,111 ]
 
-
+# REPEAT
+def repeat(str,num):
+    if (num == 0):
+        return ''
+    i=0
+    newstr=''
+    while (i<num):
+        newstr += str
+        i += 1
+    return newstr
+print(repeat('*', 3))  # '***'
+print(repeat('abc', 2))  # 'abcabc'
+print(repeat('abc', 0))  # ''
 
