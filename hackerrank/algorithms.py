@@ -9,6 +9,13 @@ def bonAppetit(bill, k, b):
 
 print(bonAppetit(bill, k, b))
 
-# Capitalize
-def solve(s):
-    return " ".join(x.capitalize() for x in s.split())
+# Divisible Sum Pairs
+n, k = (int(x) for x in input().split())
+arr = list(map(int, input().split()))
+count = 0
+for i in range(len(arr) - 1):
+    for x in range(1 + i, len(arr)):
+        if (arr[i] + arr[x]) % k == 0:
+            count += 1
+
+print(count)
