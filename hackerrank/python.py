@@ -17,3 +17,13 @@ def wrap(s, m):
 #Swap Case
 def swap_case(s):
     return s.swapcase()
+
+#Find a String
+def count_substring(string, substring):
+    long=len(string)
+    short=len(substring)
+    sum=0
+    for i in range(long-short+1):
+        if string[i:i+short] == substring:
+            sum += 1
+    return sum
