@@ -13,3 +13,7 @@ def mutate_string(s, posi, char):
 #Text Wrap
 def wrap(s, m):
     return "\n".join([s[i:i+m] for i in range(0, len(s), m)])
+
+#Swap Case
+def swap_case(s):
+    return s.swapcase()
