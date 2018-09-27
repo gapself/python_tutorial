@@ -134,3 +134,20 @@ def range_in_list(list,start=0,end=None):
 
 print(range_in_list([1,2,3,4],0,2))
 print(range_in_list([1,2,3,4]))
+
+# same frequency
+'''
+same_frequency(551122,221515) # True
+same_frequency(321142,3212215) # False
+same_frequency(1212, 2211) # True
+'''
+# not sure of it:
+def same_frequency(num1,num2):
+    if len(str(num1))==len(str(num2)):
+        return True
+    else:
+        return False
+
+print(same_frequency(551122,221515))
+print(same_frequency(321142,3212215))
+print(same_frequency(1212, 2211))
