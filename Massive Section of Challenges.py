@@ -97,3 +97,22 @@ print(repeat('*', 3))  # '***'
 print(repeat('abc', 2))  # 'abcabc'
 print(repeat('abc', 0))  # ''
 
+
+# two list dictionary
+'''
+two_list_dictionary(['a', 'b', 'c', 'd'], [1, 2, 3]) # {'a': 1, 'b': 2, 'c': 3, 'd': None}
+two_list_dictionary(['a', 'b', 'c']  , [1, 2, 3, 4]) # {'a': 1, 'b': 2, 'c': 3}
+two_list_dictionary(['x', 'y', 'z']  , [1,2]) # {'x': 1, 'y': 2, 'z': None}
+'''
+def two_list_dictionary(keys,values):
+    # solution = {keys[i]:values[i] for i in range(0,len(keys))} #to działa jedynie wtedy, kiedy len(keys)=len(values), else: out of range ;)
+    solution={}
+    for index, letter in enumerate(keys): #The optional argument allows us to tell enumerate from where to start the index. (keys,0)
+        # return index,letter #(0, 'a')
+        if index < len(values):
+            solution[keys[index]] = values[index] #dict[keys[index]]=dict[keys[0]]=dict["a"] = values[index] = values[0] = 1
+        else:
+            solution[keys[index]] = None
+    return solution
+
+print(two_list_dictionary(['a', 'b', 'c','d'], [1, 2, 3]))
