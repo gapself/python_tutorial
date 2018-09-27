@@ -116,3 +116,21 @@ def two_list_dictionary(keys,values):
     return solution
 
 print(two_list_dictionary(['a', 'b', 'c','d'], [1, 2, 3]))
+
+
+#range in list
+'''
+range_in_list([1,2,3,4],0,2) #  6
+range_in_list([1,2,3,4],0,3) # 10
+range_in_list([1,2,3,4],1) #  9
+range_in_list([1,2,3,4]) # 10
+range_in_list([1,2,3,4],0,100) # 10
+range_in_list([],0,1) # 0
+'''
+def range_in_list(list,start=0,end=None):
+    # return sum(x for x in range(list[start], list[end+1])) #jedynie dla list,start,end
+    end = end or len(list) # same as list[-1]
+    return sum(list[start:end+1])
+
+print(range_in_list([1,2,3,4],0,2))
+print(range_in_list([1,2,3,4]))
