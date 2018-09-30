@@ -206,3 +206,8 @@ def sum_up_diagonals(arr):
 def min_max_key_in_dictionary(d):
     keys = d.keys()
     return [min(keys), max(keys)]
+
+#two oldest
+def two_oldest_ages(ages):
+    return sorted(ages)[-2:]
+
