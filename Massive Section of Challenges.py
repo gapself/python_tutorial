@@ -172,8 +172,10 @@ def two_list_dictionary(keys, values):
 def nth(arr, idx):
     if idx >= 0:
         return arr[idx]
-    return arr[idx + len(arr)]
+    return arr[idx + len(arr)]    #dla idx=(-8), arr[-4]
 
+# moje:
+#   return lis[num]
 
 print(nth(['a', 'b', 'c', 'd'], 1))  # 'b'
 print(nth(['a', 'b', 'c', 'd'], -2)) #  'c'
@@ -193,6 +195,16 @@ def find_the_duplicate(arr):
     for key in counter.keys():
         if counter[key] > 1:
             return int(key)
+#moje rozw:
+def find_the_duplicate(list):
+    d = {x:list.count(x) for x in list}
+    for key,value in d.items():
+        if value >=2:
+            return key
+
+print(find_the_duplicate([1,2,1,4,3,12])) # 1
+print(find_the_duplicate([6,1,9,5,3,4,9])) # 9
+print(find_the_duplicate([2,1,3,4])) # None
 
 #SUM UP DIAGONALS
 def sum_up_diagonals(arr):
@@ -206,8 +218,14 @@ def sum_up_diagonals(arr):
 def min_max_key_in_dictionary(d):
     keys = d.keys()
     return [min(keys), max(keys)]
+#moja odp
+# return [min(d.keys()),max(d)]
 
 #two oldest
 def two_oldest_ages(ages):
     return sorted(ages)[-2:]
+
+print(two_oldest_ages( [1, 2, 10, 8] )) # [8, 10]
+print(two_oldest_ages( [6,1,9,10,4] )) # [9,10]
+print(two_oldest_ages( [4,25,3,20,19,5] )) # [20,25]
 
