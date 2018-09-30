@@ -193,3 +193,11 @@ def find_the_duplicate(arr):
     for key in counter.keys():
         if counter[key] > 1:
             return int(key)
+
+#SUM UP DIAGONALS
+def sum_up_diagonals(arr):
+    total = 0
+    for i,val in enumerate(arr):
+        total += arr[i][i]
+        total += arr[i][-1-i]
+    return total
