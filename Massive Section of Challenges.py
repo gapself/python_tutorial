@@ -142,12 +142,29 @@ same_frequency(321142,3212215) # False
 same_frequency(1212, 2211) # True
 '''
 # not sure of it:
+# def same_frequency(num1,num2):
+#     if len(str(num1))==len(str(num2)):
+#         return True
+#     else:
+#         return False
 def same_frequency(num1,num2):
-    if len(str(num1))==len(str(num2)):
-        return True
-    else:
-        return False
+    d1 = {letter:str(num1).count(letter) for letter in str(num1)}
+    d2 = {letter:str(num2).count(letter) for letter in str(num2)}
+    return d1,d2
 
 print(same_frequency(551122,221515))
 print(same_frequency(321142,3212215))
 print(same_frequency(1212, 2211))
+
+#answer
+def two_list_dictionary(keys, values):
+    collection = {}
+
+    for idx, val in enumerate(keys):
+        if idx < len(values):
+            collection[keys[idx]] = values[idx]
+        else:
+            collection[keys[idx]] = None
+
+    return collection
+
