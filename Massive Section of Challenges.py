@@ -201,3 +201,8 @@ def sum_up_diagonals(arr):
         total += arr[i][i]
         total += arr[i][-1-i]
     return total
+
+#min_max_key_in_dictionary
+def min_max_key_in_dictionary(d):
+    keys = d.keys()
+    return [min(keys), max(keys)]
