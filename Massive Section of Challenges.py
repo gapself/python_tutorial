@@ -181,3 +181,15 @@ print(nth(['a', 'b', 'c', 'd'], 0))  # 'a'
 print(nth(['a', 'b', 'c', 'd'], -4)) #  'a'
 print(nth(['a', 'b', 'c', 'd'], -1)) #  'd'
 print(nth(['a', 'b', 'c', 'd'], 3))  # 'd'
+
+#FIND THE DUPLCATE
+def find_the_duplicate(arr):
+    counter = {}
+    for val in arr:
+        if val in counter:
+            counter[val] += 1
+        else:
+            counter[val] = 1
+    for key in counter.keys():
+        if counter[key] > 1:
+            return int(key)
