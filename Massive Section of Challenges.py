@@ -218,7 +218,6 @@ def sum_up_diagonals(arr):
 def min_max_key_in_dictionary(d):
     keys = d.keys()
     return [min(keys), max(keys)]
-#moja odp
 # return [min(d.keys()),max(d)]
 
 #two oldest
@@ -229,3 +228,14 @@ print(two_oldest_ages( [1, 2, 10, 8] )) # [8, 10]
 print(two_oldest_ages( [6,1,9,10,4] )) # [9,10]
 print(two_oldest_ages( [4,25,3,20,19,5] )) # [20,25]
 
+
+# odd string
+def is_odd_string(string):
+    total = sum((ord(c) - 96) for c in string.lower()) or 0 #ord('a')=97 Unicode position of the letter!
+    return total % 2 == 1
+
+print(is_odd_string('a')) # True
+print(is_odd_string('aaaa')) # False
+print(is_odd_string('amazing')) # True
+print(is_odd_string('veryfun')) # True
+print(is_odd_string('veryfunny')) # False
