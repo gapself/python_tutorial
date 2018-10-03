@@ -239,3 +239,34 @@ print(is_odd_string('aaaa')) # False
 print(is_odd_string('amazing')) # True
 print(is_odd_string('veryfun')) # True
 print(is_odd_string('veryfunny')) # False
+
+
+def find_greater_numbers(lis):
+    total=0
+    i=0
+    j=1
+    while i<len(lis):
+        while j<len(lis):
+            if lis[j]>lis[i]:
+                total +=1
+            j+=1
+        j=i+1
+        i+=1
+    return total
+
+print(find_greater_numbers([1,2,3])) # 3
+# print(find_greater_numbers([6,1,2,7])) # 4
+# print(find_greater_numbers([5,4,3,2,1])) # 0
+# print(find_greater_numbers([])) # 0
+
+def extendList(val, list=[]):
+    list.append(val)
+    return list
+
+list1 = extendList(10)
+list2 = extendList(123,[]) #!!!!!!!!!!!!!!default
+list3 = extendList('a')
+
+print ("list1 = %s" % list1)
+print ("list2 = %s" % list2)
+print ("list3 = %s" % list3)
