@@ -255,9 +255,9 @@ def find_greater_numbers(lis):
     return total
 
 print(find_greater_numbers([1,2,3])) # 3
-# print(find_greater_numbers([6,1,2,7])) # 4
-# print(find_greater_numbers([5,4,3,2,1])) # 0
-# print(find_greater_numbers([])) # 0
+print(find_greater_numbers([6,1,2,7])) # 4
+print(find_greater_numbers([5,4,3,2,1])) # 0
+print(find_greater_numbers([])) # 0
 
 def extendList(val, list=[]):
     list.append(val)
@@ -270,3 +270,21 @@ list3 = extendList('a')
 print ("list1 = %s" % list1)
 print ("list2 = %s" % list2)
 print ("list3 = %s" % list3)
+
+def valid_parentheses(string):
+    total=0
+    i=0
+    while i <len(string):
+        if string[i]=='(':
+            total+=1
+        if string[i]==')':
+            total-=1
+        if total<0:
+            return False
+        i+=1
+    return total==0
+
+
+print(valid_parentheses(")(()))"))  # False
+print(valid_parentheses("(())((()())())")) # True
+
