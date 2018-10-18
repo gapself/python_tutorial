@@ -71,7 +71,7 @@ print(vowel_count('Colt'))  # {'o': 1}
 
 # TITLEIZE
 def titleize(string):
-    # return " ".join(word[0].upper() + word[1:] for word in string.split())
+    return " ".join(word[0].upper() + word[1:] for word in string.split())
     return string.split()
 print(titleize('this is awesome')) # "This Is Awesome"
 
@@ -107,7 +107,7 @@ two_list_dictionary(['x', 'y', 'z']  , [1,2]) # {'x': 1, 'y': 2, 'z': None}
 def two_list_dictionary(keys,values):
     # solution = {keys[i]:values[i] for i in range(0,len(keys))} #to działa jedynie wtedy, kiedy len(keys)=len(values), else: out of range ;)
     solution={}
-    for index, letter in enumerate(keys): #The optional argument allows us to tell enumerate from where to start the index. (keys,0)
+    for index, letter in enumerate(keys):
         # return index,letter #(0, 'a')
         if index < len(values):
             solution[keys[index]] = values[index] #dict[keys[index]]=dict[keys[0]]=dict["a"] = values[index] = values[0] = 1
@@ -136,11 +136,6 @@ print(range_in_list([1,2,3,4],0,2))
 print(range_in_list([1,2,3,4]))
 
 # same frequency
-'''
-same_frequency(551122,221515) # True
-same_frequency(321142,3212215) # False
-same_frequency(1212, 2211) # True
-'''
 # not sure of it:
 # def same_frequency(num1,num2):
 #     if len(str(num1))==len(str(num2)):
@@ -152,9 +147,9 @@ def same_frequency(num1,num2):
     d2 = {letter:str(num2).count(letter) for letter in str(num2)}
     return d1,d2
 
-print(same_frequency(551122,221515))
-print(same_frequency(321142,3212215))
-print(same_frequency(1212, 2211))
+print(same_frequency(551122,221515)) #t
+print(same_frequency(321142,3212215))   #f
+print(same_frequency(1212, 2211))   #t
 
 #answer
 def two_list_dictionary(keys, values):
@@ -287,4 +282,45 @@ def valid_parentheses(string):
 
 print(valid_parentheses(")(()))"))  # False
 print(valid_parentheses("(())((()())())")) # True
+
+
+#TRIANGLE
+n=4
+k=n-1
+for i in range(0,n):
+    for j in range(0,k):
+        print(end='+')
+    k-=1
+    for j in range(0,i+1):
+        print('G',end='=')
+    print("\r")
+
+#RECTANGLE
+for i in range(n-1,0,-1):
+    # k=n-i
+    print('*' * i + '=')
+
+#counting num of decimals
+n=1
+res=0
+while n>0:
+    n/=10
+    res+=1
+    print(res,n)
+
+#fibonacci
+a=0
+b=1
+while a <= b:
+    print(a)
+    c=a+b
+    a=b
+    b=c
+    if a==8:
+        break
+
+# binary gap
+def binary_gap(N):
+    return len(max(bin(N)[2:].strip('0').split('1')))
+print(binary_gap(5))
 
