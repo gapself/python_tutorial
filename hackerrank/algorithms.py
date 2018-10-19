@@ -27,22 +27,15 @@ for t in map(int,input().strip().split()):
     count[t] += 1
 print(count.index(max(count)))
 
-
-# KANGAROO
-x1V1X2V2 = input().split()
-x1 = int(x1V1X2V2[0])
-v1 = int(x1V1X2V2[1])
-x2 = int(x1V1X2V2[2])
-v2 = int(x1V1X2V2[3])
-def kangaroo(x1,v1,x2,v2):
-    num_of_jumps1=0
-    num_of_jumps2=0
-    while x1>x2 and v2>v1 or x2>x1 and v1>v2:
-        x1+=v1
-        num_of_jumps1+=1
-        x2+=v2
-        num_of_jumps2+=1
-    if x1==x2 and num_of_jumps1==num_of_jumps2:
-        return "YES"
-    return 'NO'
-print(kangaroo(x1,v1,x2,v2))
+#cats&mouse
+q = int(input())
+for q_itr in range(q):
+    xyz = input().split()
+    x = int(xyz[0])
+    y = int(xyz[1])
+    z = int(xyz[2])
+    def catAndMouse(x,y,z):
+        distance_B=abs(y-z)
+        distance_A=abs(z-x)
+        return 'Cat A' if distance_B>distance_A else 'Cat B' if distance_A>distance_B else 'Mouse C'
+    print(catAndMouse(x,y,z))
