@@ -39,3 +39,19 @@ for q_itr in range(q):
         distance_A=abs(z-x)
         return 'Cat A' if distance_B>distance_A else 'Cat B' if distance_A>distance_B else 'Mouse C'
     print(catAndMouse(x,y,z))
+
+#picking numbers
+n = int(input().strip())
+a = map(int, input().rstrip().split())
+def pickingNumbers(a):
+    a=list(a)
+    return max(a.count(num) + a.count(num+1) for num in a)
+print(pickingNumbers(a))
+
+
+
+
+
+
+
+
