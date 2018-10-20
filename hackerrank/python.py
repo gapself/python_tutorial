@@ -27,3 +27,11 @@ def count_substring(string, substring):
         if string[i:i+short] == substring:
             sum += 1
     return sum
+
+#find the second max value
+n = int(input())
+arr = list(map(int, input().split()))
+removed=max(arr)
+while max(arr)==removed:
+    arr.remove(max(arr))
+print(max(arr))
