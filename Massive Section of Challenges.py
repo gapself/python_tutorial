@@ -324,3 +324,13 @@ def binary_gap(N):
     return len(max(bin(N)[2:].strip('0').split('1')))
 print(binary_gap(5))
 
+# cyclic rotation
+n = int(input())
+A= list(map(int, input().rstrip().split()))
+k= int(input())
+i=1
+while k>=i:
+    A.insert(0,A[n-1])
+    A.pop()
+    print(A)
+    i+=1
