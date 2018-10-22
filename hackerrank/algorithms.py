@@ -50,9 +50,26 @@ print(pickingNumbers(a))
 
 #migratory birds
 n = int(input())
-k = map(int,input().strip().split())
+k = list(map(int,input().strip().split()))
 count = ([0]*n)
 for t in k:
     count[t] += 1
     print(count[1:])
 print(count.index(max(count))) #index() returns the lowest index in list that obj appears
+
+#breaking the records
+n = int(input())
+k= list(map(int, input().rstrip().split()))
+def breakingRecords(k):
+    best=worst=0
+    maxi=low=k[0]
+    for i in range(0,n):
+        if k[i]>maxi:
+            best+=1
+            maxi=k[i]
+        elif k[i]<low:
+            worst+=1
+            low=k[i]
+    result=[best,worst]
+    return ' '.join(map(str, result))
+print(breakingRecords(k))
