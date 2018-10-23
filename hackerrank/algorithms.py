@@ -73,3 +73,21 @@ def breakingRecords(k):
     result=[best,worst]
     return ' '.join(map(str, result))
 print(breakingRecords(k))
+
+# PermMissingElem
+def solution(A):
+    should_be = len(A)
+    sum_is = 0
+    for idx in range(len(A)):
+        sum_is += A[idx]
+        should_be += idx + 1
+    return should_be - sum_is + 1
+print(solution([0]))
+
+# FACTORIALS
+def lol(n):
+    factorial=1
+    for i in range(1,n+1):
+        factorial*=i
+    return factorial
+print(lol(5))
